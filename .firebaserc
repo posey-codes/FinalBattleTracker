@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "battletracker-abbcc": {
+      "hosting": {
+        "Final_Project": [
+          "battletracker-abbcc"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "battletracker-abbcc"
+  }
+}

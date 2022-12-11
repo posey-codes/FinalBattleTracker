@@ -1,0 +1,55 @@
+<br>
+<br>
+<mat-card>
+    <!-- Button for adding new content - calls the function to create new card -->
+    <button class="addnew" mat-raised-button color="orange" (click)="addNew()">Add New!</button>
+    <br>
+    <br>
+    <table>
+        <!-- Drop list class + forloop calling every creature in the ARRAY of creatures -->
+        <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+            <div  *ngFor="let creature of creatures" cdkDrag>
+                <div *ngIf="creature.id!=0" class="example-box">
+                    <mat-card class="internal-mat-card">
+                        <div class="button-row-label">
+                            <tr class="row-labels">
+                                <td>
+                                    <mat-label>Name</mat-label>
+                                </td>
+                                <td>
+                                    <mat-label>Health</mat-label>
+                                </td>
+                                <td>
+                                    <mat-label>Initiative</mat-label>
+                                </td>
+                                <td>
+                                    <!-- Edit button - opens dialog where you can edit and save creature information -->
+                                    <button mat-raised-button color="accent" class="short-button" (click)="editCreature(creature)">Edit</button>
+                                </td>
+                            </tr>
+
+                        </div>
+                        <tr>
+                            <div class="button-row">
+                                <td>
+                                    <button mat-raised-button>{{creature.name}}</button>
+                                </td>
+                                <td>
+                                    <button mat-raised-button>{{creature.health}}</button>
+                                </td>
+                                <td>
+                                    <button mat-raised-button>{{creature.initiative}}</button> &nbsp;&nbsp;&nbsp;
+                                </td>
+                                <td>
+                                    <!-- Removes creatures clicked from the array -->
+                                    <button mat-raised-button color="accent" class="short-button"
+                                        (click)="delete(creature)">Delete</button>
+                                </td>
+                            </div>
+                        </tr>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </table>
+</mat-card>

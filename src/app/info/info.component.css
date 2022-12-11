@@ -1,0 +1,31 @@
+.container {
+    height: 900px;
+    width: 960px;
+    padding-top: 25%;
+    overflow: auto;
+}
+
+table {
+    width: 100%
+}
+
+
+/* Section header */
+h2 {
+    font-size: 25px;
+    color:white 
+}
+
+td{
+    padding: 5px 5px 5px 5px;
+}
+
+.offset{
+    padding-left: 50px;
+}
+
+/* Alterante coloring for td */
+.color{
+    color: white;
+    padding-left: 50px;
+}

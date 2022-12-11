@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Edit Creature</h2>
+<!-- Each input used two way binding to change the data in the TS file-->
+<mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput name="value" [(ngModel)]="name">
+  </mat-form-field>
+  <p></p>
+  <mat-form-field appearance="fill">
+    <mat-label>Health</mat-label>
+    <input matInput  [(ngModel)]="health">
+  </mat-form-field>
+  <p></p>
+  <mat-form-field appearance="fill">
+    <mat-label>Initiative</mat-label>
+    <input matInput  [(ngModel)]="initiative">
+  </mat-form-field>
+  <p></p>
+  <!-- Calls finalCreature function to update information before sending the Creature class variable back to battle tracker-->
+  <button mat-raised-button mat-dialog-close (click)="finalCreature()" [mat-dialog-close]="creature" color="primary">Save</button>
+  <button mat-raised-button mat-dialog-close color="accent">Cancel</button>
